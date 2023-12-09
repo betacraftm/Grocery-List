@@ -4,11 +4,18 @@ let generateHTML = document.querySelector('.list');
 const input = document.querySelector('.js-input');
 const deleteBtn = document.querySelector('.delete-btn');
 let items = document.querySelectorAll('.item');
+const pattern = new RegExp("^[a-zA-Z]{1,9}$"); 
 
 function saveData() {
-  list.push(input.value);
-  generateCode(input.value);
-  input.value = '';
+  if (pattern.test(input.value)) {
+    list.push(input.value);
+    generateCode(input.value);
+    input.value = '';
+    input.placeholder = 'Add your stuff';
+  } else {
+    input.placeholder = 'Less 10 character & No num';
+    input.value = '';
+  }
 };
 
 // Interactive pencil

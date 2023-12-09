@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px black;
+}
+
+h1 {
+  position: absolute;
+  top: 30px;
+}
+
+.container .user-input {
+  position: absolute;
+  top: 120px;
+}
+
+.container .user-input input {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.container .user-input i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container .item-list {
+  position: absolute;
+  left: 100px;
+  top: 220px;
+}
+
+.container .item-list .list {
+  list-style-type: disc;
+  font-size: 20px;
+  line-height: 3rem;
+}
+
+.container .item-list .list .item {
+  cursor: pointer;
+}
+
+.container .delete-btn {
+  position: absolute;
+  bottom: 30px;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.container .delete-btn:hover {
+  box-shadow: 0px 0px 3px black;
+}
